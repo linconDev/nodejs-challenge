@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  api:
+    build: .
+    ports:
+      - "8006:8006"
+    environment:
+      PORT: 8006
+      DB_HOST: "192.168.15.3"
+      DB_PORT: 3306
+      DB_USER: "nodejs_challenge"
+      DB_PASS: "3fnr3hfxpc"
+      DB_NAME: "trabalhoengenhariadev"
+      DESTINATION: "/usr/src/app/documents"
+    volumes:
+      - ./documents:/usr/src/app/documents
